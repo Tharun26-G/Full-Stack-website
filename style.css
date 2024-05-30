@@ -1,0 +1,87 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5e77c4; /* Choose your desired color */
+    color: #FFFFFF;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.admin-login a {
+    background-color: #78c987;
+    color: #FFFFFF; /* Set text color to white */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #FFFFFF; /* Adjust border width */
+    border-radius: 20px; /* Make the border oval */
+    padding: 5px 10px; /* Add padding */
+}
+
+#logo {
+    width: 150px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin-right: 80px; /* Adjust margin as needed */
+}
+
+h1 {
+    text-align: center; /* Center horizontally */
+    flex: 10;
+    margin-left: 0px;
+    font-size: 14px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+nav {
+    text-align: center; /* Center horizontally */
+    margin-top: 50px;
+}
+.container {
+    margin-top: 30px; /* Adjust the margin-top value as needed */
+}
+
+
+.card {
+    height: 100px; /* Set your desired height */
+    display: flex;
+    left: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Align items vertically */
+    margin: 5px; /* Optional: Add some margin between cards */
+}
+
+.card-body {
+    padding: 50px; /* Increase padding for larger boxes */
+    text-align: center; /* Center text horizontally */
+}
+
+.logo-button {
+    width: 60px; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    margin-top: 0px; /* Space between text and logo button */
+}
+.container-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px !important; /* Adjust the font size as needed */
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}

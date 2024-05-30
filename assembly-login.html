@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Login</title>
+    <link rel="stylesheet" href="assembly login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="WhiteBackground">
+    <header class="d-flex justify-content-between align-items-center p-1 bg-primary text-white">
+        <a href="#"><img src="img/Tonbologo.png" class="img-responsive Tonbologo" alt="Logo" id="logo" style="width: 150px; height: 50px;"></a>
+        <h1 class="flex-grow-1 text-center m-0">TI Sensor Data & Tracking </h1>
+    </header>  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 col-sm-8 col-md-6 col-lg-6 col-xl-4 WhiteBackground shadow-lg mx-auto p-0 mt-5" id="loginBox">
+                <div class="card border-0">
+                    <div class="card-header loginBoxBorder">
+                        <h4 class="fw-bold">Assembly Login</h4>
+                    </div>
+                    <div class="card-body" id="bodyContent">
+                        <form id="assemblyLoginForm" name="assemblyLoginForm" class="form-signin" method="POST" action="assembly-dashboard.html">
+                            <div class="input-group input-group-sm mb-2">
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" name="username" autocomplete="off">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user text-primary" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="input-group input-group-sm mb-2">
+                                <input type="password" class="form-control" placeholder="Password" id="password" name="password" aria-describedby="basic-addon2">
+                                <button id="basic-addon2" class="btn btn-light border-secondary" type="button">
+                                    <i class="fa fa-eye text-danger fw-bold" id="passwordIcon" onclick="javascript:toggleEye();" aria-hidden="false"></i>
+                                </button>
+                            </div>
+                            <div class="mb-2">
+                                <input type="text" class="form-control form-control-sm" autocomplete="off" maxlength="6" id="captchaStr" name="captchaStr" placeholder="Enter CAPTCHA shown above">
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary float-end">Submit</button>
+                        </form>
+                        <form id="assemblyLoginForm" name="assemblyLoginForm" class="form-signin" method="POST" action="assembly-dashboard.html">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       <!-- function toggleEye() {
+            const passwordField = document.getElementById('password');
+            const passwordIcon = document.getElementById('passwordIcon');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            }
+        }
+            -->
+        
+    </script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="m-0">Tonbo Imaging &copy; 2024</p>
+    </footer>
+    <style>
+        
+</body>
+</html>

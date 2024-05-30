@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Dashboard</title>
+    <link rel="stylesheet" href="assembly-dashboard.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+<body class="WhiteBackground">
+    <header class="d-flex justify-content-between align-items-center p-1 bg-primary text-white">
+        <a href="#"><img src="img/Tonbologo.png" class="img-responsive Tonbologo" alt="Logo" id="logo" style="width: 150px; height: 50px;"></a>
+        <h1 class="flex-grow-1 text-center m-0">TI Sensor Data & Tracking</h1>
+    </header>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="feature-list">
+                <h3>Features</h3>
+                <ul>
+                    <li><span>TI Detector</span>
+                        <ul class="sub-list">
+                            <li><a href="#" onclick="toggleData('data1')">New Assembled Detector</a></li>
+                            <li><a href="#" onclick="toggleData('data2')">Inspect & Sensitivity Test</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Rejections</span>
+                        <ul class="sub-list">
+                            <li><a href="#" onclick="toggleData('data3')">Sensor Replacement</a></li>
+                            <li><a href="#" onclick="toggleData('data4')">Dust Sensor</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Assembled History</span>
+                        <ul class="sub-list">
+                            <li><a href="#" onclick="toggleData('data5')">Date-wise Assembled</a></li>
+                            <li><a href="#" onclick="toggleData('data6')">Overall Assembled</a></li>
+                        </ul>
+                    </li>
+                    <li><span>ODDO Status</span>
+                        <ul class="sub-list">
+                            <li><a href="#" onclick="toggleData('data7')">Update</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Detector History</span>
+                        <ul class="sub-list">
+                            <li><a href="#" onclick="toggleData('data8')">Tonbo Detector</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="dashboard-content">
+            <div id="default-content">
+                <h2>Welcome to the Assembly Dashboard</h2>
+                <p>This dashboard provides you with information related to assembly processes.</p>            </div>
+
+               <!-- Data elements will be displayed here based on the sublist item clicked -->
+               <div id="data1" class="data" style="display: none;">
+                <h2>New Assembled Detector</h2>
+                <p>This is the New Assembled Detector data.</p>
+                <!-- New Detector Assembly Form -->
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sensor-type">Type of Sensor:</label>
+                            <select name="sensor-type" id="sensor-type" class="form-control">
+                                <option value="">Select Sensor Type</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="assembled-by">Who Assembled Detectors:</label>
+                            <select name="assembled-by" id="assembled-by" class="form-control">
+                                <option value="">Select Assembler</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sensor SL. No</th>
+                                <th>Proxy Board SL.no</th>
+                                <th>Power Board SL.no</th>
+                                <th>TUV SL.no</th>
+                                <th>Tonbo SL.no</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="sensor-sl-no" id="sensor-sl-no" class="form-control"></td>
+                                <td><input type="text" name="proxy-board-sl-no" id="proxy-board-sl-no" class="form-control"></td>
+                                <td><input type="text" name="power-board-sl-no" id="power-board-sl-no" class="form-control"></td>
+                                <td><input type="text" name="tuv-sl-no" id="tuv-sl-no" class="form-control"></td>
+                                <td><input type="text" name="tonbo-sl-no" id="tonbo-sl-no" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            
+            
+
+            <div id="data2" class="data">
+                <h2>Inspect & Sensitivity Test</h2>
+                <p>This is the data for the Inspect & Sensitivity Test feature.</p>
+            </div>
+
+            <div id="data3" class="data">
+                <h2>Sensor Replacement</h2>
+                <p>This is the data for the Sensor Replacement feature.</p>
+            </div>
+
+            <div id="data4" class="data">
+                <h2>Dust Sensor</h2>
+                <p>This is the data for the Dust Sensor.</p>
+            </div>
+
+            <div id="data5" class="data">
+                <h2>Date-wise Assembled</h2>
+                <p>This is the data for the Date-wise Assembled feature.</p>
+            </div>
+
+            <div id="data6" class="data">
+                <h2>Overall Assembled</h2>
+                <p>This is the data for the Overall Assembled feature.</p>
+            </div>
+
+            <div id="data7" class="data">
+                <h2>Update ODDO</h2>
+                <p>This is the data for the ODDO status feature.</p>
+            </div>
+
+            <div id="data8" class="data">
+                <h2>Tonbo Detector</h2>
+                <p>This is the data for the Tonbo Detector feature.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-0 mt-0">
+        <p class="m-0">Tonbo Imaging &copy; 2024</p>
+    </footer>
+    
+    <script>
+        function toggleData(id) {
+            var dataElement = document.getElementById(id);
+            var defaultContent = document.getElementById('default-content');
+
+            // Hide the default content
+            defaultContent.style.display = "none";
+
+            var allDataElements = document.querySelectorAll('.data');
+
+            // Hide all data elements first
+            allDataElements.forEach(function(element) {
+                element.style.display = "none";
+            });
+
+            // Show the data corresponding to the clicked sublist
+            dataElement.style.display = "block";
+        }
+    </script>
+</body>
+</html>
