@@ -1,3 +1,4 @@
+/* Your existing CSS styles */
 body {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -18,7 +19,7 @@ header {
     z-index: 1000;
 }
 
-#logo {
+#logo {     
     width: 150px;
     height: 50px;
     margin-right: 80px;
@@ -141,9 +142,17 @@ h1 {
 }
 
 .dashboard-content {
+    margin-left: 270px; /* Adjust sidebar width */
+    padding-bottom: 50px; /* Adjust to prevent overlap with footer */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-y: auto;
     flex-grow: 1;
     margin-left: 270px;
-    position: relative;
+    position: fixed; /* Fixed position */
+    top: 60px; /* Distance from the top */
+    bottom: 50px; /* Distance from the bottom (considering footer height) */
+    left: 0;
+    right: 0;
     z-index: 1;
 }
 
@@ -151,37 +160,24 @@ h1 {
     display: none;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    border-top: 0px solid #555;
-}
-
-
 #default-content h2 {
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
-    color: #333; /* Choose your desired color */
-    margin-bottom: 10px; /* Adjust margin bottom as needed */
+    color: #333;
 }
 
 #data1 h2 {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
-    color: #333; /* Choose your desired color */
+    color: #5de4bc; /* Choose your desired color */
     margin-bottom: 10px; /* Adjust margin bottom as needed */
 }
 
 #data2 h2 {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
     color: #333; /* Choose your desired color */
-    margin-bottom: 10px; /* Adjust margin bottom as needed */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
 }
 
 #data3 h2 {
@@ -229,65 +225,98 @@ footer {
 .centered-form {
     display: flex;
     flex-direction: column;
-    width: 80%; /* Adjust form width */
-}
-
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f4f7fc;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 .form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
 .form-group {
-    flex: 1;
-    margin-right: 0 10px;
-}
-
+        flex: 1;
+        margin-right: 0 10px;
+    }
+    
+.form-group:last-child {
+        margin-right: 0;
+    }
+    
 .form-control {
-    width: 100%;
-    padding: 8px; /* Reduced padding */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #fff;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #666;
-}
-
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.table th, .table td {
-    border: 1px solid #ccc;
-    padding: 5px; /* Reduced padding */
-}
-
-.table th {
-    background-color: #f3f3f3;
-    font-weight: bold;
-}
-
-.table td input {
-    width: 80px; /* Adjusted width for smaller input boxes */
-    padding: 4px; /* Reduced padding */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.small-input {
-    width: 80px; /* Specific class to reduce width */
-}
+        display: block;
+        font-weight: bold;
+        margin-bottom: 2px;
+        color: #cf4200;
+    }
+    
+    .table-container {
+        width: 100%;
+        max-height: calc(100vh - 160px); /* Adjust according to your needs */
+        overflow-y: auto; /* Enable vertical scrolling */
+        position: relative; /* Establish positioning context */
+    }
+    
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #505150;
+        padding: 1px;
+    }
+    
+    .table th {
+        background-color: #f3f3f3;
+        color: #1a2381;
+        font-weight: bold;
+    }
+    
+    .table td {
+        vertical-align: middle;
+        padding: 0;
+    }
+    
+    .table td input {
+        width: 95%;
+        padding: 1px;
+        border: 1px solid #ae6f6f;
+        border-radius: 2px;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 1px auto;
+        display: block;
+    }
+    
+    .footer-padding {
+        padding-bottom: 50px;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 0px solid #555;
+    }
