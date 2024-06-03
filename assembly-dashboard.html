@@ -51,12 +51,13 @@
         </aside>
         <div class="dashboard-content">
             <div id="default-content">
-                <h2>Welcome to Assembly Dashboard</h2>
+                <h2>Welcome to the Assembly Dashboard</h2>
             </div>
 
             <!-- Data elements will be displayed here based on the sublist item clicked -->
             <div id="data1" class="data" style="display: none;">
                 <h2>New Assembled Detector</h2>
+                <p>This is the New Assembled Detector data</p>
                 <!-- New Detector Assembly Form -->
                 <form class="centered-form">
                     <div class="form-row">
@@ -170,41 +171,56 @@
         }
     
         var currentSLno = 1; // Initialize SL.no counter
-    
-        function addNewRow(input) {
-            var currentRow = input.closest('tr'); // Get the current row
-            var table = document.getElementById("my-table");
-    
-            // Check if Tonbo SL.no is not empty and the current row is the last row
-            if (input.value.trim() !== '' && currentRow === table.rows[table.rows.length - 1]) {
-                var newRow = table.insertRow(); // Insert a new row
-                currentSLno++; // Increment SL.no counter
-                newRow.innerHTML = `
-                    <td>${currentSLno}</td>
-                    <td><input type="text" name="tonbo-sl-no" class="form-control small-input" oninput="addNewRow(this)"></td>
-                    <td><input type="text" name="sensor-sl-no" class="form-control small-input"></td>
-                    <td><input type="text" name="proxy-board-sl-no" class="form-control small-input"></td>
-                    <td><input type="text" name="power-board-sl-no" class="form-control small-input"></td>
-                `;
-    
-                // Automatically focus on the Tonbo SL.no input field in the new row
-                newRow.querySelector('input[name="tonbo-sl-no"]').focus();
+
+function addNewRow(input) {
+    var currentRow = input.closest('tr'); // Get the current row
+    var table = document.getElementById("my-table");
+
+    // Check if the current row is the last row
+    var isLastRow = currentRow === table.rows[table.rows.length - 1];
+
+    // If the current row is the last row, add a new row
+    if (input.value.trim() !== '' && isLastRow) {
+        var newRow = table.insertRow(); // Insert a new row
+        currentSLno++; // Increment SL.no counter
+        newRow.innerHTML = `
+            <td>${currentSLno}</td>
+            <td><input type="text" name="tonbo-sl-no" class="form-control small-input" oninput="handleInput(this, 'tonbo-sl-no')"></td>
+            <td><input type="text" name="sensor-sl-no" class="form-control small-input" oninput="handleInput(this, 'sensor-sl-no')"></td>
+            <td><input type="text" name="proxy-board-sl-no" class="form-control small-input" oninput="handleInput(this, 'proxy-board-sl-no')"></td>
+            <td><input type="text" name="power-board-sl-no" class="form-control small-input" oninput="handleInput(this, 'power-board-sl-no')"></td>
+        `;
+
+        // Automatically focus on the first input field in the new row
+        newRow.querySelector('input[name="tonbo-sl-no"]').focus();
+    }
+}
+
+function handleInput(input, columnName) {
+    var currentRow = input.closest('tr'); // Get the current row
+    var table = document.getElementById("my-table");
+
+    // Add a new row if this is the last row and the input value is not empty
+    addNewRow(input);
+
+    // Move to the next row in the same column if the current input is not empty
+    if (input.value.trim() !== '') {
+        var nextRow = currentRow.nextElementSibling;
+        if (nextRow) {
+            var nextInput = nextRow.querySelector(`input[name="${columnName}"]`);
+            if (nextInput) {
+                nextInput.focus();
             }
         }
-    
-        // Add event listeners to all Tonbo SL.no input fields
-        document.querySelectorAll('input[name="tonbo-sl-no"]').forEach(function(input) {
-            input.addEventListener('input', function() {
-                var currentRow = this.closest('tr'); // Get the current row
-                var table = document.getElementById("my-table");
-    
-                // Check if Tonbo SL.no is not empty and the current row is not the last row
-                if (this.value.trim() !== '' && currentRow !== table.rows[table.rows.length - 1]) {
-                    // Focus on the Tonbo SL.no input field in the next row
-                    currentRow.nextElementSibling.querySelector('input[name="tonbo-sl-no"]').focus();
-                }
-            });
-        });
+    }
+}
+
+// Add event listeners to all input fields for the initial row
+document.querySelectorAll('input[name="tonbo-sl-no"], input[name="sensor-sl-no"], input[name="proxy-board-sl-no"], input[name="power-board-sl-no"]').forEach(function(input) {
+    input.addEventListener('input', function() {
+        handleInput(this, input.name);
+    });
+});
     </script>
     
     
