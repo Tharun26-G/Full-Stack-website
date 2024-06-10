@@ -111,8 +111,91 @@
 
             <div id="data2" class="data">
                 <h2>Inspect & Sensitivity Test</h2>
+
                 <p>This is the data for the Inspect & Sensitivity Test feature.</p>
-            </div>
+                <div class="container">
+                    <div class="header">
+                        <img src="tonbo_logo.png" alt="Logo" class="logo">
+                        <div class="name-dropdown">
+                            <label for="name">NAME</label>
+                        </div>
+                    </div>
+                    <h1>Sensitivity Test & Inspection</h1>
+                    <br>
+                    <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="sensor-type">Type of Sensor</label>
+                            <select name="sensor-type" id="sensor-type" class="form-control">
+                                <option value="">Select Sensor Type</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                            <label for="search-sl-no">Search SL.No</label>
+                            <input type="text" id="search-sl-no">
+                        </div>
+                       
+                    </form>
+                    <div class="count">
+                        <label>Count: </label>
+                        <span>P-</span>
+                        <span>F-</span>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>TI SL.No</th>
+                                <th>Status</th>
+                                <th>Sensitivity Check List</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>TUV-9008555</td>
+                                <td>
+                                    <select class="status-dropdown">
+                                        <option value="">Select</option>
+                                        <option value="pass" class="status-pass">Pass</option>
+                                        <option value="fail" class="status-fail">Fail</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <div class="checklist">
+                                        <label><input type="checkbox"> HELLO</label>
+                                        <label><input type="checkbox"> HELLO</label>
+                                        <label><input type="checkbox"> HELLO</label>
+                                        <label><input type="checkbox"> HELLO</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- More rows can go here -->
+                        </tbody>
+                    </table>
+                    <div class="footer">
+                        <div class="form-group">
+                            <label for="who-tested-sensor">Who tested Sensor</label>
+                            <select id="who-tested-sensor">
+                                <option value="">Select</option>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                
+                                <!-- Options go here -->
+                            </select>
+                        </div>
+                        <button class="save-button">SAVE</button>
+                    </div>
+                    </div>
 
             <div id="data3" class="data">
                 <h2>Sensor Replacement</h2>
