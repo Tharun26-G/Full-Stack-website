@@ -444,15 +444,15 @@ label {
     
         .save-button:hover {
             background-color: #45a049;
-        }
-.status-pass {
-    color: green;
-    background-color: #39FF14;
-    /* Neon green */
-}
 
-.status-fail {
-    color: red;
-    background-color: #FF073A;
-    /* Neon red */
-}
+        }
+
+                .status-pass {
+                    color: green;
+                    
+                }
+        
+                .status-fail {
+                    color: red;
+                   
+                }
