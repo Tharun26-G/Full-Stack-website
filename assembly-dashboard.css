@@ -320,3 +320,138 @@ label {
         padding: 10px 0;
         border-top: 0px solid #555;
     }
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            width: 150px;
+        }
+    
+        .name-dropdown {
+            display: flex;
+            align-items: center;
+        }
+    
+        .name-dropdown label {
+            margin-right: 10px;
+        }
+    
+        h1 {
+            text-align: center;
+        }
+    
+        .form-group {
+            margin-bottom: 15px;
+        }
+    
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        .search-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .search-group .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+    
+        .count {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+    
+        table th,
+        table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+    
+        .status-dropdown {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        .status-pass {
+            color: green;
+        }
+    
+        .status-fail {
+            color: red;
+        }
+    
+        .checklist label {
+            display: block;
+        }
+    
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+        }
+    
+        .footer .form-group {
+            margin-right: 10px;
+        }
+    
+        .save-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        .save-button:hover {
+            background-color: #45a049;
+        }
+                .status-pass {
+                    color: green;
+                    
+                    /* Neon green */
+                }
+        
+                .status-fail {
+                    color: red;
+                   
+                }
