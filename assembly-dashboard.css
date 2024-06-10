@@ -445,13 +445,3 @@ label {
         .save-button:hover {
             background-color: #45a049;
         }
-                .status-pass {
-                    color: green;
-                    
-                    /* Neon green */
-                }
-        
-                .status-fail {
-                    color: red;
-                   
-                }
